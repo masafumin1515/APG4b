@@ -13,6 +13,7 @@
 - [1.11.for 文・break・continue](#111for-文breakcontinue)
 - [1.12.文字列と文字](#112文字列と文字)
 - [1.13.配列](#113配列)
+- [1.14.STL の関数](#114stl-の関数)
 
 # 1.01 出力とコメント
 
@@ -111,4 +112,41 @@
 vector<int> data(3); // vectorによる配列
 int data[3]; // Cの配列
 array<int, 3> data; // arrayによる配列
+```
+
+# 1.14.STL の関数
+
+- STL -> Standard Template Library
+- 覚える関数
+  - min
+  - max
+  - swap
+  - reverse
+  - sort
+- 引数の実行順序
+
+```
+GCC, C++
+
+min(1 + 1, 2 + 2)
+↓
+min(1 + 1, 4)
+↓
+min(2, 4)
+↓
+2
+
+```
+
+```
+Clang
+
+min(1 + 1, 2 + 2)
+↓
+min(2, 2 + 2)
+↓
+min(2, 4)
+↓
+2
+
 ```
